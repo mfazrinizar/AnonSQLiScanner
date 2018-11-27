@@ -33,13 +33,13 @@ Pembaruan   : (27/11/2018)"""
 def showHelp():
     """ show commands and help message """
     print """-d untuk scan dengan memberi google dork
--f <tempat/jalur file beserta namanya> untuk scan website dari fileyang dituju
+-f <tempat/jalur file beserta namanya> untuk scan website dari file yang dituju
 --tentang untuk melihat informasi seputar saya """
 
 
 def interruptHandler():
     os.system('clear')
-    print "User interrupted the process."
+    print "User mengganggu prosesnya"
     option = raw_input("Apakah anda ingin menyimpan hasil scan ? [y/n] ")
     if option == 'y':
         # Opening the file and Saving the process.
@@ -80,21 +80,21 @@ class SqliScan:
             url = parsed.scheme + "://" + parsed.netloc
 
             os.system('clear')
-            print " Website Information"
-            print " Domain Name : " + parsed.netloc
-            print " Protocol    : " + parsed.scheme
-            print " Path        : " + parsed.path
-            print " Query[s]    : " + parsed.query + "\n"
+            print " Informasi Website"
+            print " Nama Domain  : " + parsed.netloc
+            print " Protokol     : " + parsed.scheme
+            print " Tempat/Jalur : " + parsed.path
+            print " Query[s]     : " + parsed.query + "\n"
 
             # These will check user URL whether it missed some necessary input.
             if len(parsed.scheme) == 0:
-                print "Protocol not found"
+                print "Protokol tidak ditemukan"
                 time.sleep(1); continue
             elif len(parsed.path) == 0:
-                print "Path not found"
+                print "Tempat/Jalur tidak ditemukan"
                 time.sleep(1); continue
             elif len(parsed.query) == 0:
-                print "Query not found"
+                print "Query tidak ditemukan"
                 time.sleep(1); continue
             else:
                 if self.siteStatus(url):  # True mean website is online
@@ -217,4 +217,4 @@ if __name__ == "__main__":
     try:
         SqliScan(urls)
     except KeyboardInterrupt:
-interruptHandler()
+        interruptHandler()
