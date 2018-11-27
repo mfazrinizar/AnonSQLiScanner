@@ -8,8 +8,8 @@ red='\033[31;1m'
 white='\033[37;1m'                                           
 yellow='\033[33;1m'
 sleep 1
-toilet -f slant -F gay "Anon Admin" | lolcat
-toilet -f slant -F gay "Finder" | lolcat
+toilet -f slant -F gay "Anon SQLi" | lolcat
+toilet -f slant -F gay "Scanner" | lolcat
 echo "\033[34;1m"
 cal
 date
@@ -25,6 +25,7 @@ sleep 1
 echo ""
 echo "\033[32;1mSilahkan Pilih Opsi :"
 echo "\033[32;1m"
+echo "[!] Disarankan Untuk Memakai VPN Demi Kelancaran"
 echo "[===============================================]"
 echo "A.> Anon SQLi Scanner (Scan Website Vuln SQLi)"
 echo "[===============================================]"
@@ -38,7 +39,6 @@ clear
 figlet "Anon SQLi Scanner" | lolcat
 echo "\033[32;1m"
 cd Anon
-python2 Anon.py
 python2 Anon.py -petunjuk
 fi
 
