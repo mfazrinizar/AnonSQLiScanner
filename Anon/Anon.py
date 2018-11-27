@@ -32,9 +32,9 @@ Pembaruan   : (27/11/2018)"""
 
 def showHelp():
     """ show commands and help message """
-    print """-d untuk scan dengan memberi google dork
--f <tempat/jalur file beserta namanya> untuk scan website dari file yang dituju
---tentang untuk melihat informasi seputar saya """
+    print """python2 Anon.py -d Untuk scan dengan memberi google dork
+python2 Anon.py -f <tempat/jalur file beserta namanya> Untuk scan website dari file yang dituju
+python2 Anon.py --tentang Untuk melihat informasi seputar saya """
 
 
 def interruptHandler():
