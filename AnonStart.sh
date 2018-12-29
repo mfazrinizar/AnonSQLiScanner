@@ -29,6 +29,8 @@ echo "[!] Disarankan Untuk Memakai VPN Demi Kelancaran"
 echo "[===============================================]"
 echo "A.> Anon SQLi Scanner (Scan Website Vuln SQLi)"
 echo "[===============================================]"
+echo "B.> Anon SQLi Scanner (Kalau A Tidak Work)"
+echo "[===============================================]"
 echo "Q.> Exit/Keluar"
 echo "[===============================================]"
 read -p "Anon SQLi Scanner]~#" anon
@@ -40,6 +42,15 @@ figlet "Anon SQLi Scanner" | lolcat
 echo "\033[32;1m"
 cd Anon
 python2 Anon.py -petunjuk
+fi
+
+if [ $anon = B ] || [ $anon = b ]
+then
+clear
+figlet "Anon SQLi Scanner" | lolcat
+echo "\033[32;1m"
+cd Anon
+python Anon.py -petunjuk
 fi
 
 if [ $anon = Q ] || [ $anon = q ]
